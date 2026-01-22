@@ -3,82 +3,42 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>プライバシーポリシー - Chrome拡張機能</title>
+    <title>プライバシーポリシー</title>
     <style>
         body {
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-            line-height: 1.6;
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 20px;
+            font-family: sans-serif;
+            line-height: 1.5;
+            max-width: 600px;
+            margin: 40px auto;
+            padding: 0 20px;
             color: #333;
         }
-        h1 {
-            color: #1a73e8;
-            border-bottom: 2px solid #1a73e8;
-            padding-bottom: 10px;
-        }
-        h2 {
-            color: #5f6368;
-            margin-top: 30px;
-        }
-        .last-updated {
-            color: #5f6368;
-            font-size: 0.9em;
-            margin-bottom: 30px;
-        }
+        h1 { font-size: 1.5rem; border-bottom: 1px solid #ccc; padding-bottom: 10px; }
+        h2 { font-size: 1.1rem; margin-top: 25px; }
+        ul { padding-left: 20px; }
     </style>
 </head>
 <body>
     <h1>プライバシーポリシー</h1>
-    <p class="last-updated">最終更新日: 2026年1月22日</p>
+    <p>最終更新日: 2026年1月22日</p>
 
-    <h2>1. はじめに</h2>
-    <p>本Chrome拡張機能（以下「本拡張機能」）は、社内業務の効率化を目的として提供されています。本プライバシーポリシーでは、本拡張機能における情報の取り扱いについて説明します。</p>
-
-    <h2>2. 情報の収集</h2>
-    <p>本拡張機能は、以下の情報を収集します：</p>
+    <h2>1. 情報の収集と利用目的</h2>
+    <p>本拡張機能は、社内業務の提供およびユーザー認証のため、以下の情報を最小限の範囲で取得・利用します。取得した情報は、明記された目的以外には利用しません。</p>
     <ul>
-        <li>Google認証情報（メールアドレス、ユーザー名、プロフィール画像）</li>
-        <li>ユーザー設定情報（SQL方言設定、環境設定、UI表示設定）</li>
+        <li><strong>認証情報：</strong> Google OAuth2を利用したユーザー識別（メールアドレス等）に利用します。</li>
+        <li><strong>設定情報：</strong> ユーザーごとのアプリケーション設定をブラウザ内に保存するために利用します。</li>
     </ul>
 
-    <h2>3. 情報の利用目的</h2>
-    <p>収集した情報は、以下の目的で利用します：</p>
+    <h2>2. 情報の管理と保管</h2>
     <ul>
-        <li>ユーザー認証（Google OAuth2）</li>
-        <li>本拡張機能の機能提供</li>
-        <li>ユーザー設定の保存と復元</li>
+        <li>取得した設定情報は、利用者のブラウザ（chrome.storage）に保存され、第三者のサーバーに送信・蓄積されることはありません。</li>
+        <li>認証情報はGoogleの提供する安全な仕組みを通じて処理されます。</li>
     </ul>
 
-    <h2>4. 外部サービスの利用</h2>
-    <p>本拡張機能は、認証のために以下の外部サービスを利用します：</p>
-    <ul>
-        <li>Google OAuth2 API（ユーザー認証）</li>
-    </ul>
-    <p>これらのサービスの利用については、各サービスのプライバシーポリシーが適用されます。</p>
+    <h2>3. 第三者への提供</h2>
+    <p>本拡張機能は、収集した情報を第三者に提供、販売、または公開することはありません。</p>
 
-    <h2>5. 情報の第三者提供</h2>
-    <p>本拡張機能は、社内利用を目的としており、収集した情報を第三者に提供することはありません。</p>
-
-    <h2>6. 情報の管理</h2>
-    <p>収集した情報は、以下の方法で管理されます：</p>
-    <ul>
-        <li>ユーザー設定情報：Chromeのストレージ（chrome.storage.local / chrome.storage.sync）に保存</li>
-        <li>認証情報：Google OAuth2を通じて取得し、一時的に使用</li>
-        <li>アクセス範囲：社内分析サーバ 内でのみ動作</li>
-    </ul>
-
-    <h2>7. データの保存期間</h2>
-    <p>ユーザーが本拡張機能をアンインストールするまで、設定情報はブラウザ内に保存されます。アンインストール時に自動的に削除されます。</p>
-
-    <h2>8. 使用する権限</h2>
-    <p>本拡張機能は、以下のChrome拡張機能の権限を使用します：</p>
-    <ul>
-        <li>storage：ユーザー設定の保存</li>
-        <li>identity：Google OAuth2認証</li>
-        <li>host_permissions (社内分析サーバ)：特定サイトでの機能提供</li>
-    </ul>
-
+    <h2>4. 権限の使用について</h2>
+    <p>本拡張機能は、その機能を提供するために「storage（データ保存）」「identity（認証）」「特定の社内ドメインへのアクセス」の権限を使用します。これらはすべて、業務上の機能実現のために限定して使用されます。</p>
 </body>
 </html>
